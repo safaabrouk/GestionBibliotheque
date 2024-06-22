@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.content{
+
+ background-image:  url(../img/bg/5.jpg);
+ background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color : #becbd3;
+  }
+
+#passwordIscr::placeholder {
+	color : #becbd3;
+	font-size: 12px;
+  }
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: #becbd3;
+   }
+
+#passwordIscr::-ms-input-placeholder { /* Microsoft Edge */
+	color: #becbd3;
+   }
+
+.H1FORM{
+	font-family: cursive;
+	font-weight: bold;
+	color: #edecea;
+	margin: 0;
+}
+
+
+
+
+
+h1{
+	font-family: cursive;
+	font-weight: bold;
+	color: #2e2828;
+	margin: 0;
+}
+
+h2 {
+	
+	font-family: cursive;
+	font-weight: bold;
+	color: #edecea;
+	margin: 0;
+	font-size: 2vw;
+	
+}
+
+
+span {
+
+	font-size: 12px;
+	color: #efd5c6;
+}
+
+a {
+	color: #becbd3;
+	font-size: 12px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.social-container a{
+	color: #becbd3;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #434a52;
+	background-color: #434a52;
+	 border-radius: 10px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 10px 40px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.sign-up-container button{
+  
+    border-radius: 20px;
+	border: 1px solid #434a52;
+	background-color: #434a52;
+	 border-radius: 10px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	padding:7px 40px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+	margin-top: 15px;
+
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: #becbd3;
+    color: #503737;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 5px 20px #6f4a1d;
+    transition: box-shadow 0.5s;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5%;
+
+}
+
+.ghost:hover {
+    box-shadow: 5px 5px 15px #9e7b50;
+}
+
+.form {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 20px;
+	height: 100%;
+	text-align: center;
+}
+
+.container input {
+	background: none;
+	border: none;
+	border-bottom: 1px solid #434a52;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	color: inherit;
+	padding: 5px 10px;
+	margin: 7px 0;
+	width: 100%;
+}
+
+.sign-in-container input{
+  
+	background: none;
+	border: none;
+	border-bottom: 1px solid #434a52;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	padding: 10px 15px;
+	margin: 7px 0;
+	width: 100%;
+
+}
+
+.container {
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	min-width: 1px;
+	max-width: 100%;
+	min-height: 30em;
+    /* height... */
+    height: auto;
+    max-height: 200Vmax;
+
+
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+	display: none;
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+
+
+
+.overlay {
+	background: #834a37;
+	background: -webkit-linear-gradient(to right,#e5d2c7, #e5d2c7);
+	background: linear-gradient(to right, #e5d2c7, #e5d2c7);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #fff;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 15px 0;
+}
+
+.social-container a {
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 2px;
+	height: 30px;
+	width: 30px;
+}
+
+
+.citation1{
+
+  background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/Application/bafd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+
+.citation2{
+
+  background-image:  linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/Application/image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+
+.facebook:hover{
+background-color: #3b5998;
+color: #FFFFFF;
+}
+
+.linkedin:hover{
+	background-color: #0073b0;
+	color: #FFFFFF;
+
+}
+
+.google:hover{
+	background-color: #df252f;
+	color: #FFFFFF;
+
+}
+
+#erreur{
+   color: #ef767b;
+   font-size: 10px;
+   font-family:Georgia, serif;
+   margin: 0px;
+   font-weight: bold;
+   display: none;
+
+}
+ 
+.erreur{
+   color: #ef767b;
+   font-size: 10px;
+   font-family:Georgia, serif;
+   margin: 0px;
+   font-weight: bold;
+   display: none;
+
+}
+/*------------- Forgot PASSWORD-----------------*/
+.login-dark{
+	display: none;
+}
+.login-dark .form2 {
+	max-width: 320px;
+	width: 90%;
+	background-image:  url(../img/bg/5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+	padding: 40px;
+	border-radius: 4px;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+  }
+  
+  .login-dark .illustration {
+	text-align: center;
+	padding: 15px 0 20px;
+	font-size: 100px;
+	color: #becbd3;
+  }
+  
+  .login-dark .form2 .form-control {
+	background: none;
+	border: none;
+	border-bottom: 1px solid #434a52;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	color: inherit;
+    width: 100%;
+  }
+
+  .PNonValide{
+	text-align: center;
+	font-size: 12px;
+	color: #ef767b;
+	opacity: 0.9;
+	text-decoration: none;
+	display: none;
+  }
+
+  .login-dark .form2 .forgot {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #becbd3;
+	opacity: 0.9;
+	text-decoration: none;
+  }
+  
+.textForgot{
+	text-align: center;
+	font-size: 11px;
+	color: #f8f9fa;
+	opacity: 0.9;
+	text-decoration: none;
+}
+  
+.check input{
+	margin: .4rem;
+}
+
+.check label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+  .PNonValide{
+	text-align: center;
+	font-size: 12px;
+	color: #ef767b;
+	opacity: 0.9;
+	text-decoration: none;
+	display: none;
+  }
+
+  .login-dark .form2 .forgot {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #6f7a85;
+	opacity: 0.9;
+	text-decoration: none;
+  }
+  
+.textForgot{
+	text-align: center;
+	font-size: 12px;
+	color: #f8f9fa;
+	opacity: 0.9;
+	text-decoration: none;
+}
+  
+.check input{
+	margin: .4rem;
+}
+
+.check label {
+    font: 0.9rem 'Fira Sans', sans-serif;
+}
+
+    
